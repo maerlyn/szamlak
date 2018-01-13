@@ -4,10 +4,19 @@
     "require": {
         "php": "^7.1.3",
         "ext-iconv": "*",
+        "hwi/oauth-bundle": "dev-master#71b010",
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/httplug-bundle": "^1.8",
+        "symfony/apache-pack": "^1.0",
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.0",
         "symfony/lts": "^4@dev",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/orm-pack": "^1.0",
+        "symfony/profiler-pack": "^1.0",
+        "symfony/security-bundle": "^4.0",
+        "symfony/twig-bundle": "^4.0",
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
@@ -53,7 +62,7 @@
     "extra": {
         "symfony": {
             "id": "01C3QXTEB4DX6TGC5Z9KYNWBDG",
-            "allow-contrib": false
+            "allow-contrib": true
         }
     }
 }

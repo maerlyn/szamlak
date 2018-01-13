@@ -1,0 +1,28 @@
+security:
+    # https://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        db_provider:
+            entity:
+                class: App\Entity\User
+                property: username
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: ~
+            oauth:
+                resource_owners:
+                    google: /login/check-google
+                login_path: /connect/google
+                use_forward: false
+                failure_path: /connect/google
+
+                oauth_user_provider:
+                    service: App\Repository\UserRepository
+
+    access_control:
+        - { path: ^/connect/google, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login/google, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^, roles: IS_AUTHENTICATED_FULLY }
