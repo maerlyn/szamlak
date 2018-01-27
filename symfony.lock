@@ -77,6 +77,24 @@
     "google/auth": {
         "version": "v1.2.0"
     },
+    "google/cloud-core": {
+        "version": "v1.15.3"
+    },
+    "google/cloud-vision": {
+        "version": "v0.9.0"
+    },
+    "google/gax": {
+        "version": "0.30.0"
+    },
+    "google/proto-client": {
+        "version": "0.31.0"
+    },
+    "google/protobuf": {
+        "version": "v3.5.1.1"
+    },
+    "grpc/grpc": {
+        "version": "1.6.0"
+    },
     "guzzlehttp/guzzle": {
         "version": "6.3.0"
     },
@@ -157,6 +175,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.0"
+    },
+    "rize/uri-template": {
+        "version": "0.3.2"
     },
     "symfony/apache-pack": {
         "version": "1.0",

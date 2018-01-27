@@ -28,6 +28,12 @@ services:
             - '%dataPath%'
             - '@doctrine.orm.entity_manager'
 
+    App\Command\OCRCommand:
+        arguments:
+            - '@Google\Cloud\Vision\VisionClient'
+            - '%dataPath%'
+            - '@doctrine.orm.entity_manager'
+
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
     App\Controller\:
@@ -48,3 +54,6 @@ services:
             - '%env(resolve:GOOGLE_CLIENT_SECRET)%'
             - '%env(resolve:GOOGLE_REDIRECT_URI)%'
             - '%dataPath%'
+
+    Google\Cloud\Vision\VisionClient:
+        arguments: [keyFilePath: '%dataPath%/google_auth.json']

@@ -35,6 +35,11 @@ class Invoice
     protected $isOCRed = false;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    protected $OCRResponse;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -94,6 +99,22 @@ class Invoice
     {
         $this->isOCRed = $isOCRed;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOCRResponse()
+    {
+        return $this->OCRResponse;
+    }
+
+    /**
+     * @param mixed $OCRResponse
+     */
+    public function setOCRResponse($OCRResponse): void
+    {
+        $this->OCRResponse = $OCRResponse;
     }
 
 }
