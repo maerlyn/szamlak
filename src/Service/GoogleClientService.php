@@ -50,8 +50,8 @@ class GoogleClientService
         $client->setAccessToken($accessToken);
 
         if ($client->isAccessTokenExpired()) {
-            $client->fetchAccessTokenWithRefreshToken($client->getRefreshToken());
-            file_put_contents($this->dataPath . "/token", $client->getAccessToken());
+            $newToken = $client->fetchAccessTokenWithRefreshToken($client->getRefreshToken());
+            file_put_contents($this->dataPath . "/token", json_encode($newToken));
         }
 
         return $client;
