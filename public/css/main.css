@@ -19,7 +19,7 @@ body {
     left: 0;
     z-index: 100; /* Behind the navbar */
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    padding: 3.4em 0 0;
+    padding: 48px 0 0;
 }
 
 .sidebar-sticky {
@@ -34,7 +34,7 @@ body {
 
 .sidebar .nav-link {
     font-weight: 500;
-    color: #333;
+    color: #999;
 }
 
 .sidebar .nav-link .feather {
